@@ -19,7 +19,7 @@ const HomePage = () => {
         {
           data
             ? data.map((ele) => {
-              return <Card />
+              return <Card country={ele} />
             })
 
             : "loading"
