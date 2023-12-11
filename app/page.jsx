@@ -14,6 +14,7 @@ const HomePage = () => {
 
   return (
     <main className="home-page">
+
       <SearchBar countries={countries} setCountries={setCountries} />
       <section className="cards p-6 flex justify-around items-center flex-wrap">
         {
