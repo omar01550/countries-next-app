@@ -6,7 +6,8 @@ export const searchByName = (data, name) => {
     }
 
     const result = data.filter((country) => {
-        return country.name.toLowerCase() == name.toLowerCase();
+        return country.name.toLowerCase().includes(name.toLowerCase());
+
     })
 
 
@@ -25,7 +26,7 @@ export const searchByRegion = (data, region) => {
         return data;
     } else {
         return data.filter((country) => {
-            return country.region.toLowerCase() == region;
+            return country.region.toLowerCase() == region.toLowerCase();
         })
     }
 

@@ -1,0 +1,25 @@
+.conteanar {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.conteanar .search {
+    border: solid rgba(228, 228, 228, 0.247) 2px;
+    padding: 0 20px;
+}
+
+.conteanar .search input {
+    background-color: white;
+    padding: 3px 70px 3px 0;
+    outline: none;
+}
+
+.conteanar .search i {
+    color: rgb(223, 217, 217);
+    font-weight: 900;
+    padding: 0 5px;
+
+}

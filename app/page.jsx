@@ -1,5 +1,5 @@
 "use client";
-import React from 'react'
+import React, { useState } from 'react'
 import SearchBar from './components/searchbar/search'
 import data from './data.json';
 import Card from './components/card/card';
@@ -8,17 +8,17 @@ import { searchByName, searchByRegion } from './functions';
 
 const HomePage = () => {
 
-  console.log(searchByRegion(data, "africa"));
+  const [countries, setCountries] = useState(data);
 
 
 
   return (
     <main className="home-page">
-      <SearchBar />
+      <SearchBar countries={countries} setCountries={setCountries} />
       <section className="cards p-6 flex justify-around items-center flex-wrap">
         {
-          data
-            ? data.map((ele) => {
+          countries
+            ? countries.map((ele) => {
               return <Card country={ele} />
             })
 
